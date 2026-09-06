@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config = {
-    // MongoDB Configuration (only this is from process.env)
-    MONGODB_URL: process.env.MONGODB_URL || 'mongodb+srv://malikgf:malikgf@cluster0.e806lad.mongodb.net/?appName=Cluster0',
+    // MongoDB Configuration (ONLY from environment variables - no public fallback)
+    MONGODB_URL: process.env.MONGODB_URL,
     
     // Fixed Database Name
     DB_NAME: process.env.DB_NAME || 'minibot',
@@ -18,7 +18,7 @@ const config = {
     
     // Bot Configuration
     AUTO_VIEW_STATUS: 'true',
-    AUTO_LIKE_STATUS: 'false',  // ADDED - Auto like status messages
+    AUTO_LIKE_STATUS: 'false',
     MENTION_REPLY: 'false',
     AUTO_RECORDING: 'false',
     AUTO_REACT: 'false',
@@ -46,7 +46,7 @@ const config = {
     OWNER_REACT: 'false',
     OWNER_EMOJIS: ['❤️', '🔥', '👑', '⭐', '💎'],
     REACT_EMOJIS: ['🤟', '❤️', '🔥', '👏', '😮', '😢', '🙃', '👍', '🎉', '🤔', '🙏', '😍', '😊', '🥰', '💕', '🤩', '✨', '😎', '🥳', '🙌'],
-    LIKE_EMOJIS: ['❤️', '👍', '😮', '😎', '💀'],  // ADDED - Emojis for auto like status
+    LIKE_EMOJIS: ['❤️', '👍', '😮', '😎', '💀'],
     
     // Bot Identity
     BOT_NAME: '𝐒ʜᴀᴅᴏᴡ 𝐌𝐃',
@@ -59,7 +59,6 @@ const config = {
     // Newsletter Configuration
     NEWSLETTER_JID: '120363404811118873@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',  
-
     
     // System Configuration
     MAX_RETRIES: 3,
@@ -71,39 +70,28 @@ const config = {
     
     // Default Settings Template
     DEFAULT_SETTINGS: {
-        // Status & View Settings
         AUTO_VIEW_STATUS: 'true',
-        AUTO_LIKE_STATUS: 'false',  // ADDED - Auto like status (disabled by default)
+        AUTO_LIKE_STATUS: 'false',
         MENTION_REPLY: 'false',
         AUTO_STATUS_SEEN: 'true',
         READ_MESSAGE: 'false',
-        
-        // Auto Actions
         AUTO_RECORDING: 'false',
         AUTO_REACT: 'false',
         AUTO_TYPING: 'false',
         ALWAYS_ONLINE: 'false',
         OWNER_REACT: 'false',
-        
-        // Anti Features
         ANTI_DELETE: 'false',
         ANTI_DELETE_PATH: 'inbox',
         ANTI_EDIT: 'false',
         ANTI_EDIT_PATH: 'inbox',
         ANTI_CALL: 'false',
         ANTI_LINK: 'true',
-        
-        // Group Events
         WELCOME: 'false',
         GOODBYE: 'false',
         ADMIN_ACTION: 'false',
-        
-        // Message Templates
         WELCOME_MESSAGE: '*_@user joined the group, welcome! 🎉_*',
         GOODBYE_MESSAGE: '*_@user has left the group, we will miss them! 👋_*',
         REJECT_MSG: '*Call Rejected Automatically 📵*',
-        
-        // Bot Identity
         VERSION: '12.0.0 Bᴇᴛᴀ',
         OWNER_NAME: '𝐒ʜᴀᴅᴏᴡ 𝐁ᴏʏ',
         OWNER_NUMBER: '923174838990',
@@ -114,12 +102,9 @@ const config = {
         PREFIX: '.',
         BOT_NAME: '𝐆ʜᴏsᴛ-𝐌ᴅ',
         BOT_IMAGE: 'https://i.ibb.co/Vp97fDZ6/ERFAN-MD.jpg',
-        
         REACT_EMOJIS: ['😂', '❤️', '🔥', '👏', '😮', '😢', '🙃', '👍', '🎉', '🤔', '🙏', '😍', '😊', '🥰', '💕', '🤩', '✨', '😎', '🥳', '🙌'],
         OWNER_EMOJIS: ['❤️', '🔥', '👑', '⭐', '💎'],
-        LIKE_EMOJIS: ['❤️', '👍', '😮', '😎', '💀'],  // ADDED - Emojis for auto like
-        
-        // Lists
+        LIKE_EMOJIS: ['❤️', '👍', '😮', '😎', '💀'],
         BANNED: [],
         SUDO: ["48503753592860@lid", "48503753592860@lid", "923174838990@s.whatsapp.net", "923174838990@s.whatsapp.net"]
     }
