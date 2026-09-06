@@ -1,0 +1,27 @@
+{
+  "name": "SHADOW-MD",
+  "description": "Javascript WhatsApp bot made by SHADOW-TechXD",
+  "logo": "https://i.ibb.co/Vp97fDZ6/ERFAN-MD.jpg",
+  "keywords": ["SHADOW-BOT"],
+  "success_url": "/",
+  "stack": "container",
+  
+  "env": {
+    "MONGODB_URL": {
+      "description": "MongoDB connection string for database storage",
+      "required": false
+    },
+    "DB_NAME": {
+      "description": "Database name for MongoDB (default: SHADOW-MD)",
+      "required": false,
+      "value": "SHADOW-MD"
+    }
+  },
+
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  "stack": "heroku-24"
+}
